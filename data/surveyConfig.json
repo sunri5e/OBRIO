@@ -1,0 +1,153 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "questionText": "Select your gender:",
+      "type": "single-choice",
+      "options": ["Female", "Male"],
+      "next": "q2"
+    },
+    {
+      "id": "q2",
+      "questionText": "So we can get to know you better, tell us about your relationship status.",
+      "type": "single-choice",
+      "options": ["Single", "In a relationship"],
+      "next": { "q9": ["q2", "Single"], "q3": ["q2", "In a relationship"] }
+    },
+    {
+      "id": "q3",
+      "questionText": "Are you a parent?",
+      "type": "single-choice",
+      "options": ["Yes", "No"],
+      "next": "q4"
+    },
+    {
+      "id": "q4",
+      "questionText": "{Gender} {who have children (if have children)} need a slightly different approach to find their perfect partner. But first, how did you feel in your last relationship?",
+      "type": "single-choice",
+      "options": [
+        "I was unhappy with low things were going in my relationship",
+        "I was unhappy with parts of my relationship, but some thing were working",
+        "I was generally happy with my relationship",
+        "I’ve never been in a relationship"
+      ],
+      "next": "q5"
+    },
+    {
+      "id": "q5",
+      "questionText": "Is your partner an introvert or extrovert?",
+      "type": "single-choice",
+      "options": ["Introvert", "Extrovert", "A bit of both"],
+      "next": "q6"
+    },
+    {
+      "id": "q6",
+      "questionText": "What is your partner’s gender?",
+      "type": "single-choice",
+      "options": ["Male", "Female"],
+      "next": "q7"
+    },
+    {
+      "id": "q7",
+      "questionText": "Do you agree with the statement below?",
+      "statement": "My partner and I make sex a priority in our relationship",
+      "type": "single-choice",
+      "options": ["Strongly agree", "Agree", "Neutral", "Disagree", "Strongly disagree"],
+      "next": "q8"
+    },
+    {
+      "id": "q8",
+      "questionText": "When you think about your relationship goals, you feel...?",
+      "statement": "My partner and I make sex a priority in our relationship",
+      "type": "single-choice",
+      "options": [
+        "Optimistic! They are totally doable, with some guidance.",
+        "Cautious. I’ve struggled before, but I’m hopeful.",
+        "I’m feeling a little anxious, honestly."
+      ],
+      "next": "q15"
+    },
+    {
+      "id": "q9",
+      "questionText": "Are you a single parent?",
+      "type": "single-choice",
+      "options": ["Yes", "No"],
+      "next": "q10"
+    },
+    {
+      "id": "q10",
+      "questionText": "Single {gender} {who have children (if have children)} need a slightly different approach to improve their relationship. Which statement best describes you?",
+      "type": "single-choice",
+      "options": [
+        "I’m very unhappy with how things are going in my relationship",
+        "I’m unhappy with parts of my relationship, but some things are working well",
+        "I’m generally happy in my relationship"
+      ],
+      "next": "q11"
+    },
+    {
+      "id": "q11",
+      "questionText": "Do you tend to overthink?",
+      "type": "single-choice",
+      "options": ["Yes", "No"],
+      "next": "disclaimer"
+    },
+    {
+      "id": "disclaimer",
+      "layout": "disclaimer",
+      "questionText": "So how does it work?",
+      "statement": "We analyze hundreds of data points to create your unique astrological blueprint. This is combined with AI to tailor-make your astrological insights, based on your answers. We’re going to change your relationship with astrology.",
+      "type": "single-choice",
+      "options": ["Next"],
+      "next": { "q13": ["q11", "Yes"], "q14": ["q11", "No"] },
+      "ignore": true
+    },
+
+    {
+      "id": "q13",
+      "questionText": "What is most important to you?",
+      "type": "single-choice",
+      "options": ["Success", "Romance", "Stability", "Freedom"],
+      "next": "q15"
+    },
+
+    {
+      "id": "q14",
+      "questionText": "Is emotional control tricky for you?",
+      "type": "single-choice",
+      "options": ["Yes", "Sometimes", "Rarely", "Not at all"],
+      "next": "q15"
+    },
+
+    {
+      "id": "q15",
+      "questionText": "Where did you hear about us?",
+      "type": "single-choice",
+      "options": [
+        "Poster or Billboard",
+        "Friend or Family",
+        "Instagram",
+        "Direct Mail or Package Insert",
+        "Online TV or Streaming TV",
+        "TV",
+        "Radio",
+        "Search Engine (Google, Bing, etc.)",
+        "Newspaper or Magazine",
+        "Facebook",
+        "Blog Post or Website Review",
+        "Podcast",
+        "Influencer",
+        "Youtube",
+        "Pinterest",
+        "Other"
+      ],
+      "next": "q16"
+    },
+    {
+      "id": "q16",
+      "questionText": "Tell your feelings about your survey experience",
+      "type": "input",
+      "next": "result"
+    }
+  ]
+}
