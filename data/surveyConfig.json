@@ -1,4 +1,7 @@
 {
+  "map": {
+    "Gender": "q1"
+  },
   "questions": [
     {
       "id": "q1",
@@ -23,7 +26,7 @@
     },
     {
       "id": "q4",
-      "questionText": "{Gender} {who have children (if have children)} need a slightly different approach to find their perfect partner. But first, how did you feel in your last relationship?",
+      "questionText": "{Gender} {children} need a slightly different approach to find their perfect partner. But first, how did you feel in your last relationship?",
       "type": "single-choice",
       "options": [
         "I was unhappy with low things were going in my relationship",
@@ -31,7 +34,15 @@
         "I was generally happy with my relationship",
         "I’ve never been in a relationship"
       ],
-      "next": "q5"
+      "next": "q5",
+      "mapping": {
+        "gender": "q1",
+        "children": {
+          "value": "who have children",
+          "equalTo": "Yes",
+          "basedOn": "q3"
+        }
+      }
     },
     {
       "id": "q5",
@@ -76,14 +87,22 @@
     },
     {
       "id": "q10",
-      "questionText": "Single {gender} {who have children (if have children)} need a slightly different approach to improve their relationship. Which statement best describes you?",
+      "questionText": "Single {gender} {children} need a slightly different approach to improve their relationship. Which statement best describes you?",
       "type": "single-choice",
       "options": [
         "I’m very unhappy with how things are going in my relationship",
         "I’m unhappy with parts of my relationship, but some things are working well",
         "I’m generally happy in my relationship"
       ],
-      "next": "q11"
+      "next": "q11",
+      "mapping": {
+        "gender": "q1",
+        "children": {
+          "value": "who have children",
+          "equalTo": "Yes",
+          "basedOn": "q9"
+        }
+      }
     },
     {
       "id": "q11",
