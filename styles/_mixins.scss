@@ -1,0 +1,31 @@
+@use "_variables" as *;
+
+@mixin generateIndentation($class-core, $arr, $params, $negative: false) {
+  @if $negative == true {
+    @each $step in $arr {
+      @if $step != a {
+        .#{$class-core}-#{$step} {
+          @each $param in $params {
+            #{$param}: -#{$size-base * $step};
+          }
+        }
+      }
+    }
+  } @else {
+    @each $step in $arr {
+      @if $step == a {
+        .#{$class-core}-a {
+          @each $param in $params {
+            #{$param}: auto;
+          }
+        }
+      } @else {
+        .#{$class-core}-#{$step} {
+          @each $param in $params {
+            #{$param}: $size-base * $step;
+          }
+        }
+      }
+    }
+  }
+}

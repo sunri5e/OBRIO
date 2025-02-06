@@ -1,0 +1,19 @@
+@use "./variables" as *;
+
+h1,
+.h1 {
+  font-size: $fontSize-largest;
+  line-height: 1.16;
+  margin-bottom: $size-base * 4;
+}
+
+ul {
+  list-style-type: none;
+  li + li {
+    margin-top: $size-base * 2;
+  }
+}
+
+.app-statement {
+  line-height: 1.8;
+}

@@ -1,0 +1,26 @@
+@use "./variables" as *;
+
+.app-header {
+  width: 100%;
+  // left: 0;
+  // top: 0;
+  // position: fixed;
+  height: $size-base * 11;
+  padding: $size-base $size-base * 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: #{$screen-sm + 1}) {
+    height: $size-base * 14;
+    padding: $size-base $size-base * 4;
+  }
+  &__btn {
+    display: flex;
+    padding: $size-base * 2;
+  }
+  &__logo {
+    .app-l-main--disclaimer & {
+      filter: invert(1);
+    }
+  }
+}

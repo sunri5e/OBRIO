@@ -30,19 +30,26 @@ export default function QuestionScreen({ questionId }: { questionId: string }) {
   return (
     <div>
       <h1>{replacePlaceholders(questionText, answers, mapping!)}</h1>
-      {statement && <p>{statement}</p>}
-      {type === "single-choice" &&
-        options.length &&
-        options.map((option) => (
-          <button key={option} onClick={() => onNext(option)}>
-            {option}
-          </button>
-        ))}
+      {statement && <p className="app-statement">{statement}</p>}
+      {type === "single-choice" && options.length && (
+        <div className="app-btn-group">
+          {options.map((option) => (
+            <button key={option} onClick={() => onNext(option)} className="app-btn">
+              <span className="app-btn__text">{option}</span>
+            </button>
+          ))}
+        </div>
+      )}
       {type === "input" && (
-        <>
-          <input type="text" onBlur={(e) => setInputValue(e.target.value)} />
-          <button onClick={() => onNext(inputValue)}>Next</button>
-        </>
+        <div className="app-btn-group">
+          <textarea
+            onBlur={(e) => setInputValue(e.target.value)}
+            className="app-form-control app-form-control__textarea"
+          />
+          <button onClick={() => onNext(inputValue)} className="app-btn">
+            <span className="app-btn__text">Submit</span>
+          </button>
+        </div>
       )}
     </div>
   );

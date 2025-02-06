@@ -1,0 +1,33 @@
+@use "./variables" as *;
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  color: $color-text;
+  font-family: var(--font-open-sans);
+  font-size: $fontSize-normal;
+  font-weight: $fontWeight-normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-bg;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

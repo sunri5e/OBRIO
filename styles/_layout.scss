@@ -1,0 +1,39 @@
+@use "./variables" as *;
+
+.app-l-main {
+  min-height: 100%;
+  padding-bottom: $size-base * 8;
+  &--disclaimer {
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(
+      165.54deg,
+      #141333 -33.39%,
+      #202261 15.89%,
+      #543c97 55.84%,
+      #6939a2 74.96%
+    );
+    height: calc(100% + $size-base * 16);
+    padding-top: $size-base * 16;
+    margin-top: -#{$size-base * 16};
+    @media (min-width: #{$screen-sm + 1}) {
+      height: calc(100% + $size-base * 20);
+      padding-top: $size-base * 20;
+      margin-top: -#{$size-base * 20};
+    }
+  }
+}
+
+.app-l-container {
+  padding-left: $size-base * 6;
+  padding-right: $size-base * 6;
+  max-width: $size-base * 90;
+  margin: 0 auto;
+  @media (min-width: #{$screen-sm + 1}) {
+    padding-left: $size-base * 4;
+    padding-right: $size-base * 4;
+  }
+  &__wide {
+    max-width: $size-base * 140;
+  }
+}
