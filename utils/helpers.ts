@@ -45,7 +45,7 @@ const replaceText = ({
 export const replacePlaceholders = (text: string, answers: Answers, mapping: Mapping): string => {
   const matches = text.match(/{(.*?)}/g);
 
-  if (matches) {
+  if (matches && Object.keys(answers).length) {
     matches.forEach((match) => {
       const key = match.slice(1, -1).toLowerCase();
       const mapKey = mapping[key];
