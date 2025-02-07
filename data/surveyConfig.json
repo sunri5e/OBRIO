@@ -1,7 +1,4 @@
 {
-  "map": {
-    "Gender": "q1"
-  },
   "questions": [
     {
       "id": "q1",
